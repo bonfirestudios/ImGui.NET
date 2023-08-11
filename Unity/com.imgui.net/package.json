@@ -1,0 +1,13 @@
+{
+  "name": "com.imgui.net",
+  "version": "1.0.0",
+  "displayName": "IMGui.Net",
+  "description": "IMGui.Net",
+  "_upm": {
+    "supportedPlatforms": ["Desktop", "Mobile", "Web", "Consoles"]
+  },
+  "unity": "2020.2",
+  "dependencies": {
+    "com.unity.inputsystem": "1.1.1"
+  }
+}

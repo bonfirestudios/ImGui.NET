@@ -40,3 +40,12 @@ See the [official screenshot thread](https://github.com/ocornut/imgui/issues/123
 
 https://github.com/cimgui/cimgui
 > This is a thin c-api wrapper for the excellent C++ intermediate gui imgui. This library is intended as a intermediate layer to be able to use imgui from other languages that can interface with C .
+
+# Bonfire Notes
+
+If you are upgrading / rebuilding things here, here are some notes:
+
+- Clone [this repo](https://github.com/bonfirestudios/ImGui.NET-nativebuild) to build debug versions of the cimgui (and other dlls).
+- The above repo has submodules for cimgui/cimplot/etc - you can update those independentely and rebuild as necessary.
+- You can then drop the built dlls/pdbs into the proper folder here.
+- Shell script `package.sh` will generate the unity package for this repo, basically just copying code over.  Take care when doing this as there might be local modifications directly inside the packaged folder that are lost.

@@ -16,18 +16,18 @@ namespace ImGuiNET
             Data = data;
         }
 
-        public ref T Ref<T>(int index) where T : struct
+        public ref T Ref<T>(int index) where T : unmanaged
         {
             return ref Unsafe.AsRef<T>((byte*)Data + index * Unsafe.SizeOf<T>());
         }
 
-        public IntPtr Address<T>(int index) where T : struct
+        public IntPtr Address<T>(int index) where T : unmanaged
         {
             return (IntPtr)((byte*)Data + index * Unsafe.SizeOf<T>());
         }
     }
 
-    public unsafe struct ImVector<T> where T : struct
+    public unsafe struct ImVector<T> where T : unmanaged
     {
         public readonly int Size;
         public readonly int Capacity;
@@ -50,7 +50,7 @@ namespace ImGuiNET
         public ref T this[int index] => ref Unsafe.AsRef<T>((byte*)Data + index * Unsafe.SizeOf<T>());
     }
 
-    public unsafe struct ImPtrVector<T> where T : struct
+    public unsafe struct ImPtrVector<T> where T : unmanaged
     {
         public readonly int Size;
         public readonly int Capacity;

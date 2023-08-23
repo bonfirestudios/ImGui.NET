@@ -5,7 +5,6 @@
         "Unity.Burst",
         "Unity.Collections",
         "Unity.InputSystem",
-        "Unity.RenderPipelines.Universal.Runtime",
         "Unity.RenderPipelines.HighDefinition.Runtime",
         "Unity.RenderPipelines.Core.Runtime"
     ],
@@ -13,7 +12,9 @@
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": false,
-    "precompiledReferences": [],
+    "precompiledReferences": [
+        "cimgui.dll"
+    ],
     "autoReferenced": false,
     "defineConstraints": ["UNITY_EDITOR || !UNITY_SERVER"],
     "noEngineReferences": false

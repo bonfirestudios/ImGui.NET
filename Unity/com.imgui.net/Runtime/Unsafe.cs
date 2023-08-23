@@ -27,7 +27,7 @@ namespace ImGuiNET
         {
             T value = default;
             
-            UnsafeUtility.MemCpy(source, UnsafeUtility.AddressOf(ref value), UnsafeUtility.SizeOf<T>());
+            UnsafeUtility.MemCpy(UnsafeUtility.AddressOf(ref value), source, UnsafeUtility.SizeOf<T>());
 
             return value;
         }

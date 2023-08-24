@@ -2,6 +2,7 @@ using Unity.Collections.LowLevel.Unsafe;
 
 namespace ImGuiNET
 {
+    #if UNITY_EDITOR
     public static class Unsafe
     {
         public static unsafe ref T AsRef<T>(void* ptr) where T : struct => ref UnsafeUtility.AsRef<T>(ptr);
@@ -32,4 +33,5 @@ namespace ImGuiNET
             return value;
         }
     }
+    #endif
 }

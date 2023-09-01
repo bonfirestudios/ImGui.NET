@@ -16,6 +16,6 @@
         "cimgui.dll"
     ],
     "autoReferenced": false,
-    "defineConstraints": ["UNITY_EDITOR || !UNITY_SERVER"],
+    "defineConstraints": ["IMGUI || UNITY_EDITOR"],
     "noEngineReferences": false
 }

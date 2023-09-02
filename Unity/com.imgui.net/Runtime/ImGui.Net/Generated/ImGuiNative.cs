@@ -19,5 +19,8 @@ namespace ImGuiNET
         
         [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
         public static extern byte igButtonXY(byte* label, float sizeX, float sizeY);
+
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern byte igTextColoredRGBA(float r, float g, float b, float a ,byte* label);
     }
 }

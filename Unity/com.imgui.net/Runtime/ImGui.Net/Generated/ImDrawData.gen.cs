@@ -34,6 +34,11 @@ namespace ImGuiNET
         public ref Vector2 DisplaySize => ref Unsafe.AsRef<Vector2>(&NativePtr->DisplaySize);
         public ref Vector2 FramebufferScale => ref Unsafe.AsRef<Vector2>(&NativePtr->FramebufferScale);
         public ImGuiViewportPtr OwnerViewport => new ImGuiViewportPtr(NativePtr->OwnerViewport);
+        public void AddDrawList(ImDrawListPtr draw_list)
+        {
+            ImDrawList* native_draw_list = draw_list.NativePtr;
+            ImGuiNative.ImDrawData_AddDrawList((ImDrawData*)(NativePtr), native_draw_list);
+        }
         public void Clear()
         {
             ImGuiNative.ImDrawData_Clear((ImDrawData*)(NativePtr));

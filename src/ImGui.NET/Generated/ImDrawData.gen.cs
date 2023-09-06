@@ -11,7 +11,7 @@ namespace ImGuiNET
         public int CmdListsCount;
         public int TotalIdxCount;
         public int TotalVtxCount;
-        public ImDrawList** CmdLists;
+        public ImVector CmdLists;
         public Vector2 DisplayPos;
         public Vector2 DisplaySize;
         public Vector2 FramebufferScale;
@@ -29,7 +29,7 @@ namespace ImGuiNET
         public ref int CmdListsCount => ref Unsafe.AsRef<int>(&NativePtr->CmdListsCount);
         public ref int TotalIdxCount => ref Unsafe.AsRef<int>(&NativePtr->TotalIdxCount);
         public ref int TotalVtxCount => ref Unsafe.AsRef<int>(&NativePtr->TotalVtxCount);
-        public IntPtr CmdLists { get => (IntPtr)NativePtr->CmdLists; set => NativePtr->CmdLists = (ImDrawList**)value; }
+        public ImVector<ImDrawListPtr> CmdLists => new ImVector<ImDrawListPtr>(NativePtr->CmdLists);
         public ref Vector2 DisplayPos => ref Unsafe.AsRef<Vector2>(&NativePtr->DisplayPos);
         public ref Vector2 DisplaySize => ref Unsafe.AsRef<Vector2>(&NativePtr->DisplaySize);
         public ref Vector2 FramebufferScale => ref Unsafe.AsRef<Vector2>(&NativePtr->FramebufferScale);

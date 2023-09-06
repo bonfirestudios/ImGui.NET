@@ -4877,7 +4877,8 @@
       },
       {
         "name": "CmdLists",
-        "type": "ImDrawList**"
+        "type": "ImVector_ImDrawListPtr",
+        "template_type": "ImDrawList*"
       },
       {
         "name": "DisplayPos",

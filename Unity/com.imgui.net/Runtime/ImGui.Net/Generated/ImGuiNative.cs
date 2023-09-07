@@ -22,5 +22,14 @@ namespace ImGuiNET
 
         [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
         public static extern byte igTextColoredRGBA(float r, float g, float b, float a ,byte* label);
+
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void igClearActiveID();
+        
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern byte igSelectable_BoolXY(byte* label, byte selected, ImGuiSelectableFlags flags, float sizeX, float sizeY);
+
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern byte igInputTextBurst(byte* label, byte* text, uint capacity, ImGuiInputTextFlags flags);
     }
 }

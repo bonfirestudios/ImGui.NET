@@ -12,6 +12,9 @@ namespace ImGuiNET
         public static extern void igSetNextWindowSizeXY(float sizeX, float sizeY, ImGuiCond cond);
 
         [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void igSetWindowSizeXY(float sizeX, float sizeY, ImGuiCond cond);
+
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
         public static extern void igSetNextWindowContentSizeXY(float sizeX, float sizeY);
 
         [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
@@ -31,5 +34,9 @@ namespace ImGuiNET
 
         [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
         public static extern byte igInputTextBurst(byte* label, byte* text, uint capacity, ImGuiInputTextFlags flags);
+        
+        [DllImport("cimgui", CallingConvention = CallingConvention.Cdecl)]
+        public static extern byte igBeginChild_StrXY(byte* str_id, float x, float y, byte border, ImGuiWindowFlags flags);
+
     }
 }

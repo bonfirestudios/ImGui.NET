@@ -116,22 +116,22 @@ namespace NetImGuiNET
 
         public static bool IsConnected()
         {
-            return NetImGuiNative.NetImgui_IsConnected();
+            return NetImGuiNative.NetImgui_IsConnected() != 0;
         }
 
         public static bool IsConnectionPending()
         {
-            return NetImGuiNative.NetImgui_IsConnectionPending();
+            return NetImGuiNative.NetImgui_IsConnectionPending() != 0;
         }
 
         public static bool IsDrawingRemote()
         {
-            return NetImGuiNative.NetImgui_IsDrawingRemote();
+            return NetImGuiNative.NetImgui_IsDrawingRemote() != 0;
         }
 
         public static bool IsDrawing()
         {
-            return NetImGuiNative.NetImgui_IsDrawing();
+            return NetImGuiNative.NetImgui_IsDrawing() != 0;
         }
     }
 }
